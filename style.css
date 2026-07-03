@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../img3.webp);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+
+header {
+    height: 70px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.logo h2 {
+    color: #2563eb;
+}
+nav {
+    display: flex;
+    gap: 30px;
+    padding:18px 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+
+.home {
+    min-height: 550px;
+    text-align: center;
+    background: #ffffffe1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    padding: 50px 80px;
+}
+
+.home-content {
+    width: 50%;
+}
+
+.home-content h1 {
+    font-size: 45px;
+    color: #1f2937;
+
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 18px;
+    color: #666666;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.buttons a {
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+.register-btn {
+    background-color: #2563eb;
+    color: white;
+}
+
+.register-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.view-btn {
+    color: #2563eb;
+    border: 1px solid #2563eb;
+    background-color: #dddddd;
+}
+
+.view-btn:hover {
+    background-color: #2563eb;
+    color: white;
+}
+
+.home-image {
+    width: 45%;
+    text-align: center;
+}
+
+.home-image img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+footer{
+    margin-top: 80px;
+    background:#2563eb;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
