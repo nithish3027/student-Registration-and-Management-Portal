@@ -1,0 +1,715 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: auto;
+}
+
+header {
+    background-color: #1e3a8a;
+    padding: 15px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    min-height: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 8%;
+    background-color: white;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 18px;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #1e40af;
+}
+
+.hero-image {
+    width: 40%;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 350px;
+}
+
+.features {
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.features h2 {
+    color: #1e3a8a;
+    margin-bottom: 30px;
+}
+
+.feature-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 280px;
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.card h3 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #555;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .hero-image {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .feature-box {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.login-section {
+    min-height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.login-box {
+    width: 380px;
+    background-color: white;
+    padding: 35px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-box h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.login-box > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 11px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #1e40af;
+}
+
+#loginMessage {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.register-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-text a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+.register-section {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-box {
+    width: 700px;
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.register-box h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.register-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.register-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 11px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background-color: #1e40af;
+}
+
+#registerMessage {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.login-text {
+    text-align: center;
+    margin-top: 18px;
+    color: #555;
+}
+
+.login-text a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    .register-box {
+        width: 100%;
+    }
+
+    .register-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.students-section {
+    padding: 40px 8%;
+}
+
+.students-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.students-header h1 {
+    color: #1e3a8a;
+    margin-bottom: 5px;
+}
+
+.students-header p {
+    color: #666;
+}
+
+.add-student-btn {
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.add-student-btn:hover {
+    background-color: #1e40af;
+}
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    width: 350px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.student-table {
+    overflow-x: auto;
+}
+
+.student-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.student-table th,
+.student-table td {
+    padding: 13px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.student-table th {
+    background-color: #1e3a8a;
+    color: white;
+}
+
+.student-table tr:hover {
+    background-color: #f1f5f9;
+}
+
+.delete-btn {
+    background-color: #dc2626;
+    color: white;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #b91c1c;
+}
+
+#studentMessage {
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #666;
+}
+
+@media (max-width: 700px) {
+
+    .students-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+}
+
+.about-page {
+    padding: 40px 8%;
+}
+
+.about-title {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.about-title h1 {
+    color: #1e3a8a;
+
+    margin-bottom: 8px;
+}
+
+.about-title p {
+    color: #666;
+}
+
+.about-box {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.about-box h2 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.about-box p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.about-features {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.about-card {
+    width: 100%;
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.about-card h3 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.technology-box {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.technology-box h2 {
+    color: #1e3a8a;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.technology-list {
+    display: flex;
+    gap: 20px;
+}
+
+.technology-item {
+    width: 100%;
+    background-color: #f4f6f8;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.technology-item h3 {
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+.technology-item p {
+    color: #555;
+    line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+    .about-features {
+        flex-direction: column;
+    }
+    .technology-list {
+        flex-direction: column;
+    }
+}
+
+.contact-section {
+    padding: 40px 8%;
+}
+
+.contact-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.contact-title h1 {
+    color: #1e3a8a;
+    margin-bottom: 8px;
+}
+
+.contact-title p {
+    color: #666;
+}
+
+.contact-container {
+    display: flex;
+    gap: 30px;
+    max-width: 950px;
+    margin: auto;
+}
+
+.contact-info {
+    width: 40%;
+    background-color: #1e3a8a;
+    color: white;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.contact-info h2 {
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+}
+
+.contact-item h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: #e2e8f0;
+    line-height: 1.5;
+}
+
+.contact-form-box {
+    width: 60%;
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form-box h2 {
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.contact-group {
+    margin-bottom: 16px;
+}
+
+.contact-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #333;
+}
+
+.contact-group input,
+.contact-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.contact-group input:focus,
+.contact-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.contact-group textarea {
+    resize: vertical;
+}
+
+.contact-form-box button {
+    width: 100%;
+    padding: 11px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form-box button:hover {
+    background-color: #1e40af;
+}
+
+#contactFormMessage {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-info,
+    .contact-form-box {
+        width: 100%;
+    }
+}
